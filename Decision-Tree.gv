@@ -1,0 +1,57 @@
+digraph "Decision-Tree" {
+	node [shape=square]
+	pl_labeled
+	node [shape=square]
+	node [shape=circle]
+	"class 0"
+	pl_labeled -> "class 0" [label=a]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	pl_labeled -> "class 1" [label=b]
+	node [shape=square]
+	pw_labeled
+	pl_labeled -> pw_labeled [label=c]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	pw_labeled -> "class 1" [label=b]
+	node [shape=square]
+	sl_labeled
+	pw_labeled -> sl_labeled [label=c]
+	node [shape=square]
+	node [shape=circle]
+	"class 2"
+	sl_labeled -> "class 2" [label=a]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	sl_labeled -> "class 1" [label=b]
+	node [shape=square]
+	sw_labeled
+	sl_labeled -> sw_labeled [label=c]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	sw_labeled -> "class 1" [label=a]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	sw_labeled -> "class 1" [label=b]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	sw_labeled -> "class 1" [label=c]
+	node [shape=square]
+	node [shape=circle]
+	"class 1"
+	sl_labeled -> "class 1" [label=d]
+	node [shape=square]
+	node [shape=circle]
+	"class 2"
+	pw_labeled -> "class 2" [label=d]
+	node [shape=square]
+	node [shape=circle]
+	"class 2"
+	pl_labeled -> "class 2" [label=d]
+}
